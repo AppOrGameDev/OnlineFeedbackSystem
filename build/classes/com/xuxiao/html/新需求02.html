@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>添加需求</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/fileinput.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    body{
+     font-family: 'microsoft yahei',Arial,sans-serif;
+     margin:0;
+     padding:0;
+    }
+    .mythead {
+      background-color: #337AB7;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-1 control-label">标题：</label>
+                <div class="col-md-11">
+                    <input type="text" class="form-control" placeholder="关于xxx系统升级需求">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1 control-label">客户：</label>
+                <div class="col-md-2">
+                    <select class="form-control">
+                        <option value="-1">请选择...</option>
+                        <option value="1">好乐迪</option>
+                        <option value="2">上海歌城</option>
+                        <option value="3">万达大歌星</option>
+                        <option value="4">钱柜</option>
+                        <option value="5">自由港</option>
+                    </select>
+                </div>
+                <label class="col-md-1 control-label">类型：</label>
+                <div class="col-md-2">
+                    <select class="form-control">
+                        <option value="-1">请选择...</option>
+                        <option value="1">新需求</option>
+                        <option value="2">BUG</option>
+                    </select>
+                </div>
+                <label class="col-md-1 control-label">版本：</label>
+                <div class="col-md-2">
+                    <select class="form-control">
+                        <option value="-1">请选择...</option>
+                        <option value="1">ERP2.9.0</option>
+                        <option value="2">ERP3.0.0</option>
+                    </select>
+                </div>
+                <label class="col-md-1 control-label">处理人：</label>
+                <div class="col-md-2">
+                    <select class="form-control">
+                        <option value="-1">请选择...</option>
+                        <option value="1">张晓雷-需求处理负责人</option>
+                        <option value="2">处理者2</option>
+                        <option value="3">处理者3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1 control-label">客户：</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="刘经理">
+                </div>
+                 <label class="col-md-1 control-label">电话：</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="15866668888">
+                </div>
+                 <label class="col-md-1 control-label">销售员：</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="张三">
+                </div>
+                <label class="col-md-1 control-label">电话：</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="12345678901">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1 control-label">工程员：</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="李四">
+                </div>
+                <label class="col-md-1 control-label">电话：</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="12345678901">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1 control-label">附件：</label>
+                <div class="col-md-11">
+                    <input id="file-Portrait" type="file" class="form-control file file-loading" multiple data-preview-file-type="any" data-upload-url="#" >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <button class="btn btn-primary" type="button">添加需求明细</button>
+            </div>
+        </div>
+        <br>
+        <!-- 需求总表 begin -->
+        <table class="table table-bordered table-striped table-hover table-responsive">
+            <thead class=" text-center">
+                <td>序号</td>
+                <td>系统</td>
+                <td>内容</td>
+                <td>操作</td>
+            </thread>
+            <tr>
+                <td>1</td>
+                <td>超市系统</td>
+                <td>超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要超市在指定日期具体时间段的抢购活动，要求有价格差求有价格差</td>
+                <td>
+                    <button class="btn btn-danger" type="button">移除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>超市系统</td>
+                <td>超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要超市在指定日期具体时间段的抢购活动，要求有价格差求有价格差</td>
+                <td>
+                    <button class="btn btn-danger" type="button">移除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>超市系统</td>
+                <td>超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要超市在指定日期具体时间段的抢购活动，要求有价格差求有价格差</td>
+                <td>
+                    <button class="btn btn-danger" type="button">移除</button>
+                </td>
+            </tr>
+        </table>
+        <!-- 需求总表 end -->
+        <div class="row">
+            <div class="col-md-2 col-md-offset-4">
+                <button class="btn btn-primary" type="button">发&nbsp&nbsp&nbsp&nbsp起</button>
+            </div>
+            <div class="col-md-2 ">
+                <button class="btn btn-success" type="button">保存草稿</button>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/fileinput.min.js"></script>
+    <script src="../js/fileinput_locale_zh.js"></script>
+    <script type="text/javascript">
+    //初始化fileinput控件（第一次初始化）
+    // $('#file-Portrait').fileinput({
+    //     language: 'zh', //设置语言
+    //     uploadUrl: "/FileUpload/Upload", //上传的地址
+    //     allowedFileExtensions : ['jpg', 'png','gif'],//接收的文件后缀,
+    //     maxFileCount: 100,
+    //     enctype: 'multipart/form-data',
+    //     showUpload: true, //是否显示上传按钮
+    //     showCaption: false,//是否显示标题
+    //     browseClass: "btn btn-primary", //按钮样式             
+    //     previewFileIcon: "<i class='glyphicon glyphicon-king'></i>", 
+    //     msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+    // });
+    </script>
+  </body>
+</html>

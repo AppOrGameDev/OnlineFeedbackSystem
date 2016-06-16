@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>主页</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/fileinput.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    body{
+     font-family: 'microsoft yahei',Arial,sans-serif;
+     margin:0;
+     padding:0;
+    }
+    h3, h4{
+      background-color: #ffffff;
+
+    }
+    .btn-group{
+      margin-top: 10px;
+    }
+    .side-nav {
+      width: 225px;
+      position: fixed;
+      left: 0px;
+      top: 51px;
+      height: 100%;
+      border-radius: 0;
+      border: none;
+      background-color: #181818;
+      overflow-y: auto;
+    }
+    .firstMenu{
+      background-color: #181818; 
+    }
+    .secoundMenu{
+      background-color: #464547; 
+    }
+    .main{
+      background-color: #ffffff;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 46px;
+      left: 225px;
+      margin-right: 10px;  
+      margin-left: 0px;
+    }
+    .tabbable{
+      margin-right: 10px;  
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+    }
+    .tab-content{
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      /*border:1px solid #ddd;*/
+    }
+    .modal-lg{
+      width: 80%;
+    }
+    .mythead{
+      background-color: #337AB7;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-inner " >
+          <div class="row">
+            <div class="col-md-2">
+              <span class="navbar-brand "><strong>在线反馈系统</strong></span>
+            </div>
+            <div class="col-md-1 col-md-offset-7">
+              <span class="navbar-brand ">管理员:许啸</span>
+            </div>
+            <div class="col-md-1 col-md-offset-1">
+              <div class="btn-group">
+                <a type="button" class="btn btn-default" aria-label="Left Align" href="login.html"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
+                <a type="button" class="btn btn-default" aria-label="Center Align" href="login.html">退出</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class=" nav navbar-collapse " >
+        <ul class="nav side-nav nav-pills nav-stacked firstMenu">
+          <li><a href="#"><span class="glyphicon glyphicon-cog" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp系统设置</a>
+            <ul class="nav nav-pills nav-stacked hide secoundMenu">
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-star" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp角色管理</a></li>
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-eye-open" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp权限管理</a></li>
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-user" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp用户管理</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><span class="glyphicon glyphicon-th" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp客户管理</a>
+            <ul class="nav nav-pills nav-stacked hide secoundMenu">
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-user" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp客户管理</a></li>
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-plus" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp添加客户</a></li>
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-pencil" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp编辑客户</a></li>
+            </ul>
+          </li>
+          <li ><a href="#"><span class="glyphicon glyphicon-th-list" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp需求管理</a>
+            <ul class="nav nav-pills nav-stacked hide secoundMenu">
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-share" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp需求反馈</a></li>
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-edit" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp需求处理</a></li>
+            </ul>
+          </li>
+          <li ><a href="#"><span class="glyphicon glyphicon-warning-sign" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp异常监测</a>
+            <ul class="nav nav-pills nav-stacked hide secoundMenu">
+              <li><a href="#" class="text-center"><span class="glyphicon glyphicon-tasks" style="color: white;" aria-hidden="true"></span>&nbsp&nbsp异常管理</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="main ">
+        <div class="tabbable ">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">需求反馈&nbsp&nbsp<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></li>
+            <li><a href="#tab2" data-toggle="tab">需求处理&nbsp&nbsp<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></li>
+            <li><a href="#tab3" data-toggle="tab">异常处理&nbsp&nbsp<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></li>
+          </ul>
+          <div class="tab-content ">
+            <!-- 需求反馈 begin -->
+            <div class="tab-pane active" id="tab1">
+              <div class="container-fluid">
+                <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-inline">
+                      <div class="form-group">
+                        <label>发起人</label>
+                        <input type="text" class="form-control" placeholder="张三">
+                      </div>
+                      <div class="form-group">
+                        <label>需求类型</label>
+                        <select class="form-control">
+                          <option value="-1">请选择...</option>
+                          <option value="1">新需求</option>
+                          <option value="2">BUG</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>状态</label>
+                        <select class="form-control">
+                          <option value="-1">请选择...</option>
+                          <option value="1">草稿</option>
+                          <option value="2">未回复</option>
+                          <option value="3">已回复</option>
+                        </select>
+                      </div>
+                      <div class="form-group ">
+                      <input class="form-control" type="text" placeholder="需求标题/所属客户">
+                      <input class="btn btn-primary" type="button" value="查询">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NewRequirement">添加需求</button>
+                  </div>
+                </div>
+                <br>
+                <table class="table table-bordered table-striped table-hover table-responsive">
+                  <thead class="mythead text-center">
+                    <td>序号</td>
+                    <td>发起人</td>
+                    <td>需求标题</td>
+                    <td>所属客户</td>
+                    <td>需求类型</td>
+                    <td>状态</td>
+                    <td>创建时间</td>
+                    <td>操作</td>
+                  </thead>
+                  <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>XX系统需要添加某一功能</td>
+                    <td>欢乐迪</td>
+                    <td>新需求</td>
+                    <td>草稿</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>李四</td>
+                    <td>XX系oo功能报错</td>
+                    <td>欢乐迪</td>
+                    <td>BUG</td>
+                    <td>已回复</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>王五</td>
+                    <td>XX系统某模块需要性能优化</td>
+                    <td>欢乐迪</td>
+                    <td>新需求</td>
+                    <td>未回复</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>赵六</td>
+                    <td>XX系统需要添加某一功能</td>
+                    <td>欢乐迪</td>
+                    <td>新需求</td>
+                    <td>草稿</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>孙七</td>
+                    <td>XX系统需要添加某一功能</td>
+                    <td>欢乐迪</td>
+                    <td>新需求</td>
+                    <td>草稿</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>张三</td>
+                    <td>XX系统需要添加某一功能</td>
+                    <td>欢乐迪</td>
+                    <td>新需求</td>
+                    <td>草稿</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>李四</td>
+                    <td>XX系oo功能报错</td>
+                    <td>欢乐迪</td>
+                    <td>BUG</td>
+                    <td>已回复</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>王五</td>
+                    <td>XX系统某模块需要性能优化</td>
+                    <td>欢乐迪</td>
+                    <td>新需求</td>
+                    <td>未回复</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>赵六</td>
+                    <td>XX系统需要添加某一功能</td>
+                    <td>欢乐迪</td>
+                    <td>新需求</td>
+                    <td>草稿</td>
+                    <td>2016-01-01 12:12:00</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">查看</button>
+                        <button type="button" class="btn btn-primary">编辑</button>
+                        <button type="button" class="btn btn-primary">发起</button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                  <ul class="pagination ">
+                    <li class="disable">
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 需求反馈 end -->
+
+            <!-- 需求处理 begin -->
+            <div class="tab-pane " id="tab2">
+              <p>tab2反馈者a标签中href="#tab1"指向唯一内容的div并且data-toggle="tab"</p>
+            </div>
+            <!-- 需求处理 end -->
+
+            <!-- 异常处理 begin -->
+            <div class="tab-pane " id="tab3">
+              <p>tab3处理者a标签中href="#tab1"指向唯一内容的div并且data-toggle="tab"</p>
+            </div>
+            <!-- 异常处理 end -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- modal begin -->
+    <!-- 添加需求 begin -->
+    <div class="modal fade" id="NewRequirement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <button type="button" class="close closeBtnRequire" ><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title text-center" id="myModalLabel">添加需求</h3>
+          </div>
+          <div class="modal-body ">
+            <!-- 添加需求 begin -->
+            <div class="container">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-1 control-label">标题：</label>
+                        <div class="col-md-11">
+                            <input type="text" class="form-control" placeholder="关于xxx系统升级需求">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-1 control-label">客户：</label>
+                        <div class="col-md-2">
+                            <select class="form-control">
+                                <option value="-1">请选择...</option>
+                                <option value="1">好乐迪</option>
+                                <option value="2">上海歌城</option>
+                                <option value="3">万达大歌星</option>
+                                <option value="4">钱柜</option>
+                                <option value="5">自由港</option>
+                            </select>
+                        </div>
+                        <label class="col-md-1 control-label">类型：</label>
+                        <div class="col-md-2">
+                            <select class="form-control">
+                                <option value="-1">请选择...</option>
+                                <option value="1">新需求</option>
+                                <option value="2">BUG</option>
+                            </select>
+                        </div>
+                        <label class="col-md-1 control-label">版本：</label>
+                        <div class="col-md-2">
+                            <select class="form-control">
+                                <option value="-1">请选择...</option>
+                                <option value="1">ERP2.9.0</option>
+                                <option value="2">ERP3.0.0</option>
+                            </select>
+                        </div>
+                        <label class="col-md-1 control-label">处理人：</label>
+                        <div class="col-md-2">
+                            <select class="form-control">
+                                <option value="-1">请选择...</option>
+                                <option value="1">张晓雷-需求处理负责人</option>
+                                <option value="2">处理者2</option>
+                                <option value="3">处理者3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-1 control-label">客户：</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="刘经理">
+                        </div>
+                         <label class="col-md-1 control-label">电话：</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="15866668888">
+                        </div>
+                         <label class="col-md-1 control-label">销售员：</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="张三">
+                        </div>
+                        <label class="col-md-1 control-label">电话：</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="12345678901">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-1 control-label">工程员：</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="李四">
+                        </div>
+                        <label class="col-md-1 control-label">电话：</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="12345678901">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-1 control-label">附件：</label>
+                        <div class="col-md-11">
+                            <input id="file-Portrait" type="file" class="form-control"  >
+                            <!-- <input id="file-Portrait" type="file" class="form-control file file-loading" multiple data-preview-file-type="any" data-upload-url="#" > -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <button class="btn btn-primary newRequireDetail" type="button"  >添加需求明细</button>
+                    </div>
+                </div>
+                <br>
+                <!-- 需求总表 begin -->
+                <table class="table table-bordered table-striped table-hover table-responsive">
+                    <thead class=" text-center">
+                        <td>序号</td>
+                        <td>系统</td>
+                        <td>内容</td>
+                        <td>操作</td>
+                    </thread>
+                    <tr>
+                        <td>1</td>
+                        <td>超市系统</td>
+                        <td>超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要超市在指定日期具体时间段的抢购活动，要求有价格差求有价格差</td>
+                        <td>
+                            <button class="btn btn-danger" type="button">移除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>超市系统</td>
+                        <td>超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要超市在指定日期具体时间段的抢购活动，要求有价格差求有价格差</td>
+                        <td>
+                            <button class="btn btn-danger" type="button">移除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>超市系统</td>
+                        <td>超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要求有价格差超市在指定日期具体时间段的抢购活动，要超市在指定日期具体时间段的抢购活动，要求有价格差求有价格差</td>
+                        <td>
+                            <button class="btn btn-danger" type="button">移除</button>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- 需求总表 end -->
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-4">
+                        <button class="btn btn-primary" type="button">发&nbsp&nbsp&nbsp&nbsp起</button>
+                    </div>
+                    <div class="col-md-2 ">
+                        <button class="btn btn-success" type="button">保存草稿</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 添加需求 end -->
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default closeBtnRequire" >关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 添加需求 end -->
+    <!-- 需求明细 begin -->
+     <div class="modal fade" id="RequirementDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <button type="button" class="close closeBtnRequireDetail" ><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title text-center" id="myModalLabel">需求明细</h3>
+          </div>
+          <div class="modal-body ">
+            <div class="container-fluid">
+              <div class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-md-1 control-label">系统版本：</label>
+                    <div class="col-md-11">
+                      <select class="form-control">
+                        <option value="-1">请选择...</option>
+                        <option value="1" >ERP财务系统2.9.0</option>
+                        <option value="2" selected>ERP财务系统3.0.0</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-1 control-label">需求内容：</label>
+                  <div class="col-md-11">
+                    <textarea class="form-control" rows="5" placeholder="请输入需求描述"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" >保存</button>
+            <button type="button" class="btn btn-default closeBtnRequireDetail" >关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 需求明细 end -->
+    <!-- modal end -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/fileinput.min.js"></script>
+    <script src="../js/fileinput_locale_zh.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $('.firstMenu li').click(function(){
+        if($(this).has("ul").length > 0){
+          if($(this).find("ul").hasClass("hide")){
+            $(this).find("ul").removeClass("hide");
+          }else{
+            $(this).find("ul").addClass("hide");
+          }
+        }
+        $('.firstMenu li').removeClass("active");
+        $(this).addClass("active");
+      });
+
+      $('.secoundMenu li').click(function(){
+        $('.firstMenu li').removeClass("active");
+        $('.secoundMenu li').removeClass("active");
+        $(this).addClass("active");
+        return false;//阻止事件冒泡
+      });
+
+      $('.newRequireDetail').click(function(){
+        $('#NewRequirement').modal('hide');
+        $('#RequirementDetail').modal('show');
+       
+      });
+
+      $('.closeBtnRequireDetail').click(function(){
+        $('#RequirementDetail').modal('hide');
+        $('#NewRequirement').modal('show');
+      });
+
+      $('.closeBtnRequire').click(function(){
+        $('#NewRequirement').modal('hide');
+      });
+    })
+    </script>
+  </body>
+</html>
