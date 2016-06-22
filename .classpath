@@ -10,5 +10,34 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="lib/depend/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/depend/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/depend/standard-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/json/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="lib/json/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/json/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/json/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="lib/json/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/json/ezmorph-1.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/json/json-lib-2.2.3-jdk15.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-aop-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-aspects-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-beans-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-context-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-context-support-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-core-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-expression-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-instrument-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-instrument-tomcat-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-jdbc-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-jms-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-orm-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-oxm-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-struts-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-test-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-tx-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-web-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-webmvc-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/springMVC/spring-webmvc-portlet-3.2.0.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
